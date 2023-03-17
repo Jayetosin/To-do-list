@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+body {
+    background-color: rgb(65, 59, 126);
+    color: black;
+    font-size: 16px;
+    border-radius: 20px;
+}
+form {
+    text-align: left;
+    background-color: rgb(5, 172, 55);
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+}
+input {
+    width: 60%; 
+    margin: 5px 0; 
+    text-align: left;
+    
+}
+
+ textarea{
+   margin: 6px;
+   padding: 20px;
+
+} 
+h2 {
+text-align: center;
+padding: 10px;
+margin: 10px;
+}
