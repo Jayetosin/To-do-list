@@ -1,47 +1,43 @@
-localStorage.setItem('Add task');
-localStorage.getItem('Edit-task');
-localStorage.clear();
+let input = document.querySelector('.enter-list');
+let addbtn = document.querySelector('.add-list');
+let task = document.querySelector('.task');
 
-let toDo = [];
-
-function AddTodo (text) {
-    const todo ={
-        text,
-        checked: false,
-        id: Date.now(),
-    };
-
-    toDo.push(todo);
-    console.log(toDo)
-};
-
-const form = document.querySelector('.todo-form');
-
-form.addEventListener('Submit' , event => {
-    event.preventDefault();
-    const input =document.querySelector('.todo-input');
-    const text = input.do.trim();
-    if( text !==''){
-        AddTodo(text);
-        input.do ='',
-        localStorage.setItem('Add task', JSON.stringify(toDo)); 
+input.addEventListener('keyup' ,() =>{
+    if(input.value.trim() != 0){
+        addbtn.classList.add('active')
+    } else{
+        addbtn.classList.remove('active')
     }
-    else{
-      alert("Please add task")
-      };
 });
-   
-let edittask =localStorage.getItem('Edit-task');
-if (edittask){
-  todolist = JSON.parse(localStorage.getItem('Edit-task'))
-}
-else{
-  deletetask ="none";
-}
 
-
-function deletetask() {
-  localStorage.clear();
-list.innerHTML ="",
-todolist= [];
-};
+addbtn.addEventListener('click' ,() =>{
+    if(input.value.trim() != 0){
+        let newItem =document.createElement('div');
+        newItem.classList.add('Item');
+        newItem.innerHTML =""
+        <p>{input,value}</p>
+          <div class="item-btn">
+            <i class="fa-solid fa.pen.to.square"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+    
+        task.appendChild(newItem)
+        input.value ='';
+    } else{
+       alert('Please enter task')
+    }
+    localStorage.setItem('addbtn'); 
+});
+task.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('fa-solid fa-xmark')){
+        e.target.parentElement.parentElement.clear();
+    }
+    localStorage.clear();
+})
+task.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('fa-solid fa.pen.to.square')
+    ){
+        e.target.parentElement.parentElement.classList,toggle('completed');
+    }
+    localStorage.getItem('task'); 
+})

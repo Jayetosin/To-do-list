@@ -4,37 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>To-Do List</title>
 </head>
 <body>
-    
-        <div class="container">
-          <h1 class="To-Do">To-Do List</h1>
-          
-          <!-- add the empty state here -->
-          <div class="empty-state">
-            <svg class="checklist-icon"><use href="#checklist-icon"></use></svg>
-            <h2 class="empty-state__title">Add Tasks</h2>
+    <h1 class="Title">
+      To-Do List
+    </h1>
+
+    <div class="todo-list">
+      <div class="list-head">
+        <input type="text" placeholder="enter task" class="enter-list">
+        <button class="Add-list">Add</button>
+      </div>
+
+      <div class="task">
+       <!--  <div class="item  completed">
+          <p>Task here</p>
+          <div class="item-btn">
+            <i class="fa-solid fa.pen.to.square"></i>
+            <i class="fa-solid fa-xmark"></i>
           </div>
-          <!-- end -->
-          <form class="todo-form">
-            <input autofocus type="text" placeholder="Reading" class="todo-input">
-            <div>
-                <ul class="todo-list">
-                    <li>
-                        <input type="checkbox" onclick="taskComplete(this)" class="check">
-                        <input type="text" value="Add task" class="task">
-                        <button class="Addtask" id="AddTask">+</button>
-                        <button class="deletetask" id="deletetask">-</button>
-                        <button class="edittask"id="editTask">Edit Task</button>
-                     </li>
-                  </ul>
-            </div>
-            <div>
-              <script src="index.js"></script>
-            </div>
-          </form>
-        </div>
-      
+        </div> -->
+      </div>
+
+      <script src="index.js"></script>
+    </div>
 </body>
 </html>
